@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<!--
+    Personal website by Oswaldo Arias
+    hosted in https://arias.tk
+-->
+<html lang="es">
+<head>
+    <!-- Meta info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oswaldo Arias">
+    <meta name="description" content="Sitio web personal.">
+    <link rel="shortcut icon" href="o.png" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Arias</title>
+
+    <!-- External resources -->
+    <script src="https://kit.fontawesome.com/f80db59561.js" crossorigin="anonymous"></script> <!-- Fontawesome link -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> <!-- Google Fonts link -->
+
+
+    <!-- Stylesheet -->
+    <style>
+
+        /* Adding Norwester font */
+        @font-face {
+            font-family: "Norwester";
+            src: url("norwester.eot");
+            src: url("norwester.woff") format("woff"),
+            url("norwester.otf") format("opentype"),
+            url("norwester.svg#filename") format("svg");
+        }
+
+        /* Pre-configurated styles */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after, q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        body {
+            -webkit-text-size-adjust: none;
+        }
+        mark {
+            background-color: transparent;
+            color: inherit;
+        }
+        input::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+        input, select, textarea {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+        }
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+			-moz-animation: none !important;
+			-webkit-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+			-moz-transition: none !important;
+			-webkit-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+        }
+        
+        /* General Styles */
+        html {
+            font-size: 16pt;
+            background-color: #1e252d;
+            background: url(toronto.webp) no-repeat center center fixed; /* Background image link */
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+	    }
+        body {
+            color: rgba(255, 255, 255, 0.25);
+            height: 100%;
+        }
+        body, input, select, textarea {
+            font-family: "Merriweather", Georgia, serif;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 2.375;
+        }
+        a {
+            -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border-bottom: dotted 1px;
+            text-decoration: none;
+        }
+            a:hover {
+                border-bottom-color: transparent;
+            }
+        strong, b {
+            font-weight: 600;
+        }
+        em, i {
+            font-style: italic;
+        }
+        p {
+            text-align: justify;
+            margin: 0 0 2rem 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Norwester", Helvetica, sans-serif;
+            font-weight: 900;
+            line-height: 1.5;
+            letter-spacing: 0.075em;
+            text-transform: uppercase;
+            margin: 0 0 1rem 0;
+        }
+            h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+                border-bottom: 0;
+                color: inherit;
+                text-decoration: none;
+            }
+        h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            margin: 0 0 2rem 0;
+        }
+        h2 {
+            font-size: 1.75rem;
+            line-height: 1.3;
+            margin: 0 0 1.5rem 0;
+        }
+        h3 {
+            font-size: 1.25rem;
+            margin: 0 0 1.5rem 0;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        h5 {
+            font-size: 0.9rem;
+        }
+        h6 {
+            font-size: 0.8rem;
+        }
+        sub {
+            font-size: 0.8rem;
+            position: relative;
+            top: 0.5rem;
+        }
+        sup {
+            font-size: 0.8rem;
+            position: relative;
+            top: -0.5rem;
+        }
+        blockquote {
+            border-left: solid 4px;
+            font-style: italic;
+            margin: 0 0 2rem 0;
+            padding: 0.5rem 0 0.5rem 2rem;
+        }
+        code {
+            border: solid 2px;
+            font-family: "Courier New", monospace;
+            font-size: 0.9rem;
+            margin: 0 0.25rem;
+            padding: 0.25rem 0.65rem;
+        }
+        pre {
+            -webkit-overflow-scrolling: touch;
+            font-family: "Courier New", monospace;
+            font-size: 0.9rem;
+            margin: 0 0 2rem 0;
+        }
+            pre code {
+                display: block;
+                line-height: 1.75;
+                padding: 1rem 1.5rem;
+                overflow-x: auto;
+            }
+        hr {
+            border: 0;
+            border-bottom: solid 2px;
+            margin: 3rem 0;
+        }
+            hr.major {
+                margin: 5rem 0;
+            }
+        .align-left {
+            text-align: left;
+        }
+        .align-center {
+            text-align: center;
+        }
+        .align-right {
+            text-align: right;
+        }
+        input, select, textarea {
+            color: #212931;
+        }
+        a {
+            color: rgba(255, 255, 255, 0.7);
+            border-bottom-color: rgba(33, 41, 49, 0);
+        }
+            a:hover {
+                border-bottom-color: transparent;
+                color: #18bfef !important;
+            }
+        strong, b {
+            color: #212931;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        blockquote {
+            border-left-color: #eeeeee;
+        }
+        code {
+            background: rgba(220, 220, 220, 0.25);
+            border-color: #eeeeee;
+        }
+        hr {
+            border-bottom-color: #eeeeee;
+        }
+        ul li{
+            display: inline;
+            margin: 1%;
+        }
+        button {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+
+            background-color: transparent;
+        }
+        
+        /* Specific Styles */
+        #pic, #picture {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            border: 20px solid rgba(255, 255, 255, 0);
+            transition-duration: 2s;
+            text-align: center;
+        }
+            #pic:hover {
+                border: 20px solid rgba(255, 255, 255, 0.5);
+                transition-duration: 3s;
+                cursor: pointer;
+            }
+            #pic img, #picture img {
+                border-radius: 50%;
+                border: 15px solid rgba(255, 255, 255, 0);
+                transition-duration: 3s;
+                opacity: 0.85;
+            }
+                #pic img:hover {
+                    border: 15px solid rgba(255, 255, 255, 0.7);
+                    transition-duration: 2s;
+                    opacity: 1.0;
+                }
+        #intro {
+            position: absolute;
+            width: 100%;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+            #intro h1 {
+                font-size: 5rem;
+                line-height: 1.1;
+                margin: 0 0 2rem 0;
+                text-align: center;
+                transition-duration: 3s;
+            }
+                #intro h1:hover {
+                    color: rgba(255, 215, 0, 0.8);
+                    transition-duration: 2s;
+                    cursor: default;
+                }
+        #links {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #contact {
+            width: 80vw;
+            position: absolute;
+            top: 66%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+            #contact a {
+                margin-right: 1.5rem;
+                margin-left: 1.5rem;
+            }
+        #copyright {
+            position: absolute;
+            left: 50%;
+            bottom: 0%;
+            transform: translate(-50%, -50%);
+        }
+            #copyright h6 {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 1.75em;
+                text-align: center;
+                margin: 0;
+                transition-duration: 3s;
+            }
+                #copyright h6:hover {
+                    color: rgba(255, 215, 0, 0.8);
+                    transition-duration: 2s;
+                    cursor: pointer;
+                }
+        .modal-content h2, .modal-content h3, .modal-content h4, .modal-content p, .modal-content a {
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 1rem;
+        }
+        .modal-content h2 {
+            font-size: 3rem;
+            color: gold;
+        }
+        .modal-content h3 {
+            font-size: 1.5rem;
+            color: rgba(255, 215, 0, 0.9);
+        }
+        .modal-content h4, .profile-content h4 {
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+        }
+        .profile-content h4 {
+            margin-top: 1rem;
+        }
+        .modal-content p, .modal-content a {
+            font-size: 1rem;
+        }
+        .modal-content a, .profile-content b {
+            color: gold;
+        }
+        .profile-content a:hover h4, .profile-content a:hover h4 b {
+            border-bottom-color: transparent;
+            color: #18bfef !important;
+        }
+        #norwester {
+            font-family: "Norwester", Helvetica, sans-serif;
+        }
+
+        /* Style for the icons size */
+        .fab, .fas {
+            font-size: 2rem;
+        }
+
+        /* Modal */
+
+        /* Modal and Profile background */
+        .modal, .profile {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 10vh; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(255, 255, 255, 0); /* White w/ opacity */
+        }
+        /* Modal and Profile content */
+        .modal-content, .profile-content {
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            width: 80vw;
+            height: 80vh;
+            overflow-y: auto;
+        }
+        /* Close button */
+        .close {
+            color: rgba(255, 255, 255, 0.3);
+            float: right;
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-right: 0px;
+            transition-duration: 500ms;
+            transform: translate(-50%, -50%);
+        }
+            .close:hover,
+            .close:focus {
+                transition-duration: 500ms;
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        /* Responsive design */
+        @-ms-viewport {
+            width: device-width;
+        }
+        body {
+            -ms-overflow-style: scrollbar;
+        }
+        @media screen and (max-width: 1680px) {
+            html {
+                font-size: 12pt;
+            }
+        }
+        @media screen and (max-width: 1280px) {
+            html {
+                font-size: 11pt;
+            }
+            #pic {
+                width: 20vw;
+                height: 20vw;
+            }
+            .fab {
+                font-size: 2.5em;
+            }
+            a {
+                font-size: 130%;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            #pic, #picture {
+                width: 30vw;
+                height: 30vw;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            html, body {
+                min-width: 320px;
+            }
+            #pic, #picture {
+                top: 25%;
+                width: 45vw;
+                height: 45vw;
+            }
+            #links {
+                top: 65%;
+            }
+            #contact {
+                top: 75%;
+            }
+            .profile {
+                padding-top: 10vh;
+            }
+            .profile-content {
+                height: 80vh;
+            }
+        }
+        @media screen and (max-width: 360px) {
+            html {
+                font-size: 10pt;
+            }
+            #pic, #picture {
+                width: 55vw;
+                height: 55vw;
+            }
+        }
+        @media screen and (max-height: 460px) {
+            #intro {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #links {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #contact {
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .profile {
+                padding-top: 5vh;
+            }
+            .profile-content {
+                height: 90vh;
+            }
+        }
+    </style>
+</head>
+
+<!-- Structure -->
+
+<body>
+    <!-- Center picture -->
+    <button id="pic">
+        <img src="niagara.webp" width="100%" alt=""> <!-- Pic link -->
+    </button>
+    <div id="intro">
+        <h1>Oswaldo Arias</h1> <!-- Center title -->
+    </div>
+    <div id="links"> <!-- Social links -->
+        <div id="link">
+            <a target="__blank" href="https://www.linkedin.com/in/oswaldoarias/" class="fab fa-linkedin-in"></a> &nbsp; &nbsp; &nbsp;
+            <a target="__blank" href="https://github.com/Osares10" class="fab fa-github-alt"></a> &nbsp; &nbsp; &nbsp;
+            <a target="__blank" href="https://medium.com/@Osares10" class="fab fa-medium-m"></a>
+        </div>
+    </div>
+    <div id="contact"> <!-- Contact info -->
+        <a href="tel:+524281140827">+52 428 114 0827</a>
+        <a href="mailto:oswaldo@arias.tk">oswaldo@arias.tk</a>
+    </div>
+    <footer>
+        <button id="copyright"> <!-- Copyright info -->
+            <h6>Template by &copy; Oswaldo Arias</h6>
+        </button>
+    </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>MIT License</h2>
+            <h3>Copyright (c) 2020 Oswaldo Arias</h3>
+            <p>
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+            </p>
+            <p>
+                The above copyright notice and this permission notice shall be included in all
+                copies or substantial portions of the Software.
+            </p>
+            <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                SOFTWARE.
+            </p>
+            <h3>Fonts & Icons</h3>
+            <p><a id="norwester" target="__blank" href="https://jamiewilson.io/norwester/"> NORWESTER </a> by <a target="__blank" href="https://jamiewilson.io" id="norwester">Jamie Wilson</a></p>
+            <p><a target="__blank" href="https://fonts.google.com/specimen/Merriweather"> Merriweather </a> by <a target="__blank" href="https://sorkintype.com">Sorkin Type</a></p>
+            <p>Icons by <a target="__blank" href="https://fontawesome.com/license/free">Font Awesome</a></p>
+            <h4>Original template at <a target="__blank" href="https://github.com/Osares10/one-page-template">github.com</a></h4>
+        </div>
+    </div>
+    <!-- Profile -->
+    <div id="myProfile" class="profile">
+        <!-- Profile content -->
+        <div class="profile-content">
+            <span class="close">&times;</span>
+            <div id="picture">
+                <img src="niagara.webp" width="100%" alt=""> <!-- Pic link -->
+                <h4>Técnico en <b>Programación</b></h4>
+                <h4>Estudiante de Ingeniería <b>Aeronaútica</b></h4>
+                <br>
+                <a target="__blank" href="cv.pdf" class="fas fa-file-download"><h4>Descargar <b>CV</b></h4></a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts section -->
+    <script>
+        var modal = document.getElementById("myModal");     // Get the modal
+        var profile = document.getElementById("myProfile"); // Get the profile
+        var picture = document.getElementById("picture");   // Get the picture
+        var pic = document.getElementById("pic");           // Get the pic
+        var links = document.getElementById("links");       // Get the links
+        var contact = document.getElementById("contact");   // Get the contact
+        var title = document.getElementById("intro");       // Get the title
+        
+        // Get the button that opens the modal
+        var cpy = document.getElementById("copyright");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        var spanp = document.getElementsByClassName("close")[1];
+        
+        // When the user clicks the button, open the modal 
+        cpy.onclick = function() {
+            modal.style.display = "block";
+            title.style.display = "none";
+            pic.style.display = "none";
+            links.style.display = "none";
+            contact.style.display = "none";
+        }
+
+        // When the user clicks the pic, open the profile
+        pic.onclick = function() {
+            profile.style.display = "block";
+            title.style.display = "none";
+            pic.style.display = "none";
+            links.style.display = "none";
+            contact.style.display = "none";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+            title.style.display = "block";
+            cpy.style.display = "block";
+            pic.style.display = "block";
+            links.style.display = "block";
+            contact.style.display = "block";
+        }
+        spanp.onclick = function() {
+            profile.style.display = "none";
+            title.style.display = "block";
+            cpy.style.display = "block";
+            pic.style.display = "block";
+            links.style.display = "block";
+            contact.style.display = "block";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal || event.target == profile) {
+                modal.style.display = "none";
+                profile.style.display = "none";
+                title.style.display = "block";
+                cpy.style.display = "block";
+                pic.style.display = "block";
+                links.style.display = "block";
+                contact.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
