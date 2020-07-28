@@ -1,7 +1,7 @@
 # one-page-template
-Template used to create the website at arias.tk
+Template used to create my personal website
 
-Simple template, live demo at arias.tk
+Simple template, live demo at [arias.tk](https://arias.tk)
 
 ![Demo Screenshot](demo-1.jpg)
 ![Demo Screenshot](demo-2.jpg)
